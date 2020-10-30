@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: normal;
+  src:   url('fonts/Poppins/Poppins-Regular.otf?') format('otf'),
+         url('fonts/Poppins/Poppins-Regular.ttf') format("truetype");
+}
+
+html, body{min-height:100%;}
+body{
+  width: 100%;
+  height:100vh;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  font-family: Poppins,sans-serif;
+}
+.container
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  position: sticky;
+}
+
+.top-image
+{
+  width: fit-content;
+  margin: 75px auto 0 auto;
+}
+
+.top-image > img
+{
+  width: 37px;
+  height: 37px;
+}
+.welcome-title
+{
+  margin-top: 123px;
+  font: normal normal 600 44px/65px Poppins;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 30px;
+}
+
+.welcome-subtitle
+{
+  text-align: center;
+  font: normal normal 600 18px/27px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 0.43;
+}
+
+.search-container
+{
+  display: flex;
+  flex-flow: row;
+  width: 572px;
+  height: 95px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 2px solid #000000;
+  border-radius: 11px;
+  opacity: 1;
+  margin: 75px auto 0 auto;
+  overflow: hidden;
+}
+.search-input
+{
+  width: 476px;
+}
+.search-input > input
+{
+  border: none;
+  width: 90%;
+  box-shadow: none;
+  outline: none;
+  text-decoration: none;
+  margin-left: 41px;
+  font: normal normal 600 18px/27px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin-top: 35px;
+}
+
+.search-input > input::placeholder
+{
+  font: normal normal 600 18px/27px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.search-image
+{
+  background-color: #000000;
+  width: 96px;
+  height: 100%;
+  cursor: pointer;
+}
+.search-image > img
+{
+  width: 29.31px;
+  margin: 35px 0  0 35px;
+}
+
+.welcome-footer
+{
+  display: flex;
+  flex-flow: row;
+  font: normal normal 600 16px/25px Poppins;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  margin: 0 140px 48px 140px;
+  width: calc(100% - 280px);
+}
+
+.welcome-footer > div:nth-child(1), .welcome-footer > div:nth-child(3){
+    opacity: 0.2;
+}
