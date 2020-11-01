@@ -3,12 +3,20 @@
 <head>
   <title>My search results</title>
   <link rel="stylesheet" href="css/results.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <div class="modal-container"></div>
   <div class="container">
      <div class="back-results-arrow-container">
-       <div class="back-arrow-image" onclick="goTo('search.html')"><img src="assets/arrow.svg"></div>
+       <div class="back-arrow-image" onclick="goTo('index.html')"><img src="assets/arrow.svg"></div>
        <div class="back-arrow-text">Your search results</div>
      </div>
      <div class="search-container">
@@ -26,10 +34,10 @@
        <div class="search-result-sentiment">&#128512; Happy</div>
      </div>
      <div class="results-container" ></option>
-       <div class="result-container" onclick="goTo('https://www.w3schools.com/jsref/met_loc_replace.asp')">
+       <div class="result-container">
          <div class="result-index">1</div>
          <div class="result">
-            <div class="result-title">Tweeter Handle:</div>
+            <div class="result-title" onclick="showmodal()">Tweeter Handle:</div>
             <div class="result-content">
               Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
             </div>
@@ -108,7 +116,7 @@
          </div>
        </div>
        <div class="result-container">
-         <div class="result-index">10</div>
+         <div class="result-index" id="test1">10</div>
          <div class="result">
             <div class="result-title">Tweeter Handle:</div>
             <div class="result-content">
@@ -118,11 +126,30 @@
        </div>
      </div>
   </div>
+
+  <button onclick="test()">test</button>
   <script>
+
+    function test(){
+      alert("ali is foool");
+      $("#test").html("testtesttest")    
+      }
+
+
   function goTo(url)
   {
     location.replace(url);
   }
+
+  function showmodal(id,category){
+    var url = "profile.html";
+    $('.modal-container').load(url,{},function(result){
+            $('#myModal').modal({show:true});
+    });
+  }
+
   </script>
-</body>
+
+  </body>
+
 </html>
