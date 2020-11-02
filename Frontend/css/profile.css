@@ -15,14 +15,14 @@ body
 {
   display: flex;
   flex-flow: column;
-  margin-top: 25%;
+ 
 }
 
 .top-line
 {
-  width: 60px;
-  height: 3px;
-  border-radius: 10px;
+  width: 70px;
+  height: 5px;
+  border-radius: 20px;
   background-color: #000000;
   margin: 42.5px auto 46.5px auto;
 }
