@@ -33,7 +33,8 @@
                 </div>
               </div>
               <div class="close-profile">
-                <button type="button" class="close" onclick="goTo('results.html')" >
+                <button type="button" onclick="goTo('results.html')" >
+                
                   <img src="assets/close.svg"></button>
               </div>
             </div>
@@ -136,4 +137,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+      function goTo(url)
+      {
+        location.replace(url);
+      }
+      </script>
 </div>
