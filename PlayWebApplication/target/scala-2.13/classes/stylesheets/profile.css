@@ -1,0 +1,189 @@
+body
+{
+  background-color: #ffffff;
+}
+.modal-open
+{
+  background-color: #ffffff;
+}
+.modal-dialog
+{
+  width: 90%;
+  margin: 0 auto 0 auto;
+}
+.modal-content
+{
+  display: flex;
+  flex-flow: column;
+ 
+}
+
+.top-line
+{
+  width: 70px;
+  height: 5px;
+  border-radius: 20px;
+  background-color: #000000;
+  margin: 42.5px auto 46.5px auto;
+}
+.modal-header
+{
+  display: flex;
+  flex-flow: row;
+  padding: 0 5% 0 5%;
+  border: none;
+  box-shadow: none;
+}
+.close, .close:hover
+{
+  opacity: 1;
+}
+.close-profile
+{
+  margin-left: auto;
+}
+.profile-picture
+{
+  border-radius: 50%;
+  border: 5px solid #000000;
+  overflow: hidden;
+  margin-right: 55px;
+  height: fit-content;
+  width: fit-content;
+}
+.profile-picture > img
+{
+  width: 199px;
+  height: 199px;
+  object-fit: cover;
+}
+.profile-info
+{
+  display: flex;
+  flex-flow: column;
+  width: 690px;
+}
+
+.profile-info-header
+{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.profile-info-header-title
+{
+  display: flex;
+  flex-flow: column;
+}
+
+.profile-info-header-name
+{
+  font: normal normal 600 29px/43px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.profile-info-header-tag
+{
+  font: normal normal 600 14px/29px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 0.3;
+}
+.profile-number-following, .profile-number-followers
+{
+  font: normal normal 600 18px/27px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 0.3;
+  margin-right: 7px;
+}
+.profile-number-following
+{
+  margin-left: auto;
+}
+
+.profile-text-following, .profile-text-followers
+{
+  font: normal normal 600 18px/27px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.profile-text-following
+{
+  margin-right: 25px;
+}
+.profile-description
+{
+  margin-top: 10px;
+  font: normal normal 600 14px/29px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 0.3;
+}
+.profile-info-footer
+{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin-top: 23px;
+}
+.profile-info-footer-image
+{
+  margin-right: 6px;
+}
+.profile-info-footer-image > img
+{
+  height: 22px;;
+}
+
+.profile-info-footer-text
+{
+  font: normal normal 600 16px/25px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin-right: 10px;
+}
+
+.profile-info-footer-date-joined,  .profile-info-footer-link
+{
+  font: normal normal 600 16px/25px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 0.3;
+  margin-right: 52px;
+}
+.modal-body
+{
+  padding: 0 5% 50px 5%;
+}
+.profile-body
+{
+  display: flex;
+  flex-flow: column;
+  margin-top: 51px;
+}
+
+.profile-body-title
+{
+  font: normal normal 600 18px/27px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 0.3;
+}
+.results-container
+{
+  display: flex;
+  flex-flow: column;
+  margin-top: 54px;
+  height: fit-content;
+}
+button, button:active, button:focus
+{
+  outline: none;
+  box-shadow: none;
+}

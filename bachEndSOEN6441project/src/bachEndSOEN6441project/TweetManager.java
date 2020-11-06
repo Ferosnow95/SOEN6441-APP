@@ -13,7 +13,8 @@ import twitter4j.TwitterFactory;
 public class TweetManager {
 
 	public static ArrayList<String> getTweets(String searchKeys) {
-
+		
+		int count=1;
 		Twitter twitter = new TwitterFactory().getInstance();
 		ArrayList<String> tweetList = new ArrayList<String>();
 		try {
@@ -24,8 +25,9 @@ public class TweetManager {
 				List<Status> tweets = result.getTweets();
 				for (Status tweet : tweets) {
 					tweetList.add(tweet.getText());
+					count++;
 				}
-			} while ((query = result.nextQuery()) != null);
+			} while ( (query = result.nextQuery()) != null && count <= 250 );
 		} catch (TwitterException te) {
 			te.printStackTrace();
 			System.out.println("Failed to search tweets: " + te.getMessage());
