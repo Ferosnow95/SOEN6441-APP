@@ -17,11 +17,11 @@ public class HomeController extends Controller {
 
     /**
      * An action that renders an HTML page with a welcome message.
-     * The configuration in the <code>routes</code> file means that
-     * this method will be called when the application receives a
-     * <code>GET</code> request with a path of <code>/</code>.
+     * The     * this method will be called when the application receives a
+     *   configuration in the <code>routes</code> file means that
+    * <code>GET</code> request with a path of <code>/</code>.
      */
-    public Result index() {
+    public Result index(@Required String search_text) {
         return  ok(views.html.index.render());
     }
     public Result results() throws TwitterException {
