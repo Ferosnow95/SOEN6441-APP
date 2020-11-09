@@ -1,5 +1,6 @@
-package models;
+package service;
 
+import models.TwitterResultModel;
 import twitter4j.*;
 
 import java.util.ArrayList;
@@ -7,10 +8,10 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-public class TweetHandler {
-
+public class TweetService {
 
     public static ArrayList<String> getTweets(String searchKeys) {
+
         int count=1;
         Twitter twitter = new TwitterFactory().getInstance();
         ArrayList<String> tweetList = new ArrayList<String>();
@@ -24,11 +25,26 @@ public class TweetHandler {
                     tweetList.add(tweet.getText());
                     count++;
                 }
-            } while ( (query = result.nextQuery()) != null && count <= 250 );
+            } while ( (query = result.nextQuery()) != null && count <= 10 );
         } catch (TwitterException te) {
             te.printStackTrace();
             System.out.println("Failed to search tweets: " + te.getMessage());
         }
+        return tweetList;
+    }
+
+    public static List<String> searchByHashTag(String hashTag) throws TwitterException {
+
+        Twitter twitter = new TwitterFactory().getInstance();
+        QueryResult result = twitter.search(new Query(hashTag));
+
+        List<String> tweetList = result.getTweets().stream()
+                .limit(10)
+                .sorted()
+                .map(s ->{
+                    return new TwitterResultModel().toString(); })
+                .collect(toList());;
+
         return tweetList;
     }
 

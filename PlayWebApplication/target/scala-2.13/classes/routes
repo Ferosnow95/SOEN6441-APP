@@ -4,8 +4,9 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
-GET     /index          controllers.HomeController.index()
-GET     /results          controllers.HomeController.results()
+GET     /index         controllers.HomeController.index()
+GET     /results           controllers.HomeController.results()
+GET    /tweetSearch/:keywords                    controllers.HomeController.tweetSearch(keywords:String)
 
 
 # Map static resources from the /public folder to the /assets URL path

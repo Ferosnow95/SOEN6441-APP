@@ -17,3 +17,9 @@ run
 sbt
 compile
 run
+compile
+run
+compile
+run
+compile
+run

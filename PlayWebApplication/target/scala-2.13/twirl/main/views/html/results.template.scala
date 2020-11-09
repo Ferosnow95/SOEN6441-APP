@@ -29,12 +29,10 @@ object results extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Ht
       {
 
 
-Seq[Any](format.raw/*2.1*/("""
-
-"""),format.raw/*4.1*/("""<html>
+Seq[Any](format.raw/*2.1*/("""<html>
 <head>
     <title>My search results</title>
-    <link rel="stylesheet" href='"""),_display_(/*7.35*/routes/*7.41*/.Assets.versioned("stylesheets/results.css")),format.raw/*7.85*/("""'>
+    <link rel="stylesheet" href='"""),_display_(/*5.35*/routes/*5.41*/.Assets.versioned("stylesheets/results.css")),format.raw/*5.85*/("""'>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -70,7 +68,7 @@ Seq[Any](format.raw/*2.1*/("""
         <div class="result-container">
             <div class="result-index">1</div>
             <div class="result">
-                <div class="result-title" onclick="goTo('profile.html')">Tweeter Handle:</div>
+                <div class="result-title" onclick="goTo('profile.html')">results:</div>
                 <div class="result-content">
                     Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
                 </div>
@@ -80,12 +78,13 @@ Seq[Any](format.raw/*2.1*/("""
         <div class="result-container">
             <div class="result-index">2</div>
             <div class="result">
-                <div class="result-title">Tweeter Handle:</div>
+                <div class="result-title">r.twitterName:</div>
+                <div class="result-title"></div>
                 <div class="result-content">
-                    Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
                 </div>
             </div>
         </div>
+
 
         <div class="result-container">
             <div class="result-index">3</div>
@@ -172,25 +171,25 @@ Seq[Any](format.raw/*2.1*/("""
 <button onclick="test()">test</button>
 <script>
 
-    function test()"""),format.raw/*145.20*/("""{"""),format.raw/*145.21*/("""
-      """),format.raw/*146.7*/("""alert("JQ Test");
+    function test()"""),format.raw/*144.20*/("""{"""),format.raw/*144.21*/("""
+      """),format.raw/*145.7*/("""alert("JQ Test");
       $("#test").html("testtesttest")
-      """),format.raw/*148.7*/("""}"""),format.raw/*148.8*/("""
+      """),format.raw/*147.7*/("""}"""),format.raw/*147.8*/("""
 
 
-  """),format.raw/*151.3*/("""function goTo(url)
-  """),format.raw/*152.3*/("""{"""),format.raw/*152.4*/("""
-    """),format.raw/*153.5*/("""location.replace(url);
-  """),format.raw/*154.3*/("""}"""),format.raw/*154.4*/("""
+  """),format.raw/*150.3*/("""function goTo(url)
+  """),format.raw/*151.3*/("""{"""),format.raw/*151.4*/("""
+    """),format.raw/*152.5*/("""location.replace(url);
+  """),format.raw/*153.3*/("""}"""),format.raw/*153.4*/("""
 
-  """),format.raw/*156.3*/("""function showmodal(id,category)"""),format.raw/*156.34*/("""{"""),format.raw/*156.35*/("""
-    """),format.raw/*157.5*/("""var url = "profile.html";
-    $('.modal-container').load(url,"""),format.raw/*158.36*/("""{"""),format.raw/*158.37*/("""}"""),format.raw/*158.38*/(""",function(result)"""),format.raw/*158.55*/("""{"""),format.raw/*158.56*/("""
-            """),format.raw/*159.13*/("""$('#myModal').modal("""),format.raw/*159.33*/("""{"""),format.raw/*159.34*/("""show:true"""),format.raw/*159.43*/("""}"""),format.raw/*159.44*/(""");
-    """),format.raw/*160.5*/("""}"""),format.raw/*160.6*/(""");
-  """),format.raw/*161.3*/("""}"""),format.raw/*161.4*/("""
+  """),format.raw/*155.3*/("""function showmodal(id,category)"""),format.raw/*155.34*/("""{"""),format.raw/*155.35*/("""
+    """),format.raw/*156.5*/("""var url = "profile.html";
+    $('.modal-container').load(url,"""),format.raw/*157.36*/("""{"""),format.raw/*157.37*/("""}"""),format.raw/*157.38*/(""",function(result)"""),format.raw/*157.55*/("""{"""),format.raw/*157.56*/("""
+            """),format.raw/*158.13*/("""$('#myModal').modal("""),format.raw/*158.33*/("""{"""),format.raw/*158.34*/("""show:true"""),format.raw/*158.43*/("""}"""),format.raw/*158.44*/(""");
+    """),format.raw/*159.5*/("""}"""),format.raw/*159.6*/(""");
+  """),format.raw/*160.3*/("""}"""),format.raw/*160.4*/("""
 
-  """),format.raw/*163.3*/("""</script>
+  """),format.raw/*162.3*/("""</script>
 
 </body>
 
@@ -213,11 +212,11 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2020-11-04T17:18:01.633653900
+                  DATE: 2020-11-09T22:54:06.979952200
                   SOURCE: D:/uni Projects/PlayWebApplication/app/views/results.scala.html
-                  HASH: a17dccd34a223da6325fd11f85f5dde0cfd55d26
-                  MATRIX: 902->1|998->4|1026->6|1137->91|1151->97|1215->141|9473->8370|9503->8371|9538->8378|9628->8440|9657->8441|9690->8446|9739->8467|9768->8468|9801->8473|9854->8498|9883->8499|9915->8503|9975->8534|10005->8535|10038->8540|10128->8601|10158->8602|10188->8603|10234->8620|10264->8621|10306->8634|10355->8654|10385->8655|10423->8664|10453->8665|10488->8672|10517->8673|10550->8678|10579->8679|10611->8683
-                  LINES: 27->1|32->2|34->4|37->7|37->7|37->7|175->145|175->145|176->146|178->148|178->148|181->151|182->152|182->152|183->153|184->154|184->154|186->156|186->156|186->156|187->157|188->158|188->158|188->158|188->158|188->158|189->159|189->159|189->159|189->159|189->159|190->160|190->160|191->161|191->161|193->163
+                  HASH: bc3cfd130594237d0c1cbb7a85104f918976abce
+                  MATRIX: 902->1|998->4|1109->89|1123->95|1187->139|9123->8046|9153->8047|9188->8054|9278->8116|9307->8117|9340->8122|9389->8143|9418->8144|9451->8149|9504->8174|9533->8175|9565->8179|9625->8210|9655->8211|9688->8216|9778->8277|9808->8278|9838->8279|9884->8296|9914->8297|9956->8310|10005->8330|10035->8331|10073->8340|10103->8341|10138->8348|10167->8349|10200->8354|10229->8355|10261->8359
+                  LINES: 27->1|32->2|35->5|35->5|35->5|174->144|174->144|175->145|177->147|177->147|180->150|181->151|181->151|182->152|183->153|183->153|185->155|185->155|185->155|186->156|187->157|187->157|187->157|187->157|187->157|188->158|188->158|188->158|188->158|188->158|189->159|189->159|190->160|190->160|192->162
                   -- GENERATED --
               */
           

@@ -30,11 +30,10 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 
 
 Seq[Any](format.raw/*2.1*/("""
-
-"""),format.raw/*4.1*/("""<html>
+"""),format.raw/*3.1*/("""<html>
 <head>
   <title>My search page</title>
-  <link rel="stylesheet" href='"""),_display_(/*7.33*/routes/*7.39*/.Assets.versioned("stylesheets/search.css")),format.raw/*7.82*/("""'>
+  <link rel="stylesheet" href='"""),_display_(/*6.33*/routes/*6.39*/.Assets.versioned("stylesheets/search.css")),format.raw/*6.82*/("""'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -46,25 +45,29 @@ Seq[Any](format.raw/*2.1*/("""
   <div class="welcome-subtitle">Start searching tweets</div>
   <div class="search-container">
     <div class="search-input">
-      <input type="text" placeholder="Search Here">
+      <input type="text" name="search_text" placeholder="Search Here">
     </div>
-    <div class="search-image" onclick="goTo('results')"><img src="assets/images/search.svg"></div>
+    <div class="search-image" onclick="goTo('results.html')" ><img src="assets/images/search.svg"></div>
   </div>
+
+
+
   <div class="welcome-footer">
     <div>Team Project</div>
     <div>Team HG.005</div>
     <div>SOEN 6441</div>
   </div>
 </div>
+
 <script>
+
   function goTo(url)
-  """),format.raw/*31.3*/("""{"""),format.raw/*31.4*/("""
-    """),format.raw/*32.5*/("""location.replace(url);
-  """),format.raw/*33.3*/("""}"""),format.raw/*33.4*/("""
-  """),format.raw/*34.3*/("""</script>
+  """),format.raw/*35.3*/("""{"""),format.raw/*35.4*/("""
+    """),format.raw/*36.5*/("""location.replace(url);
+  """),format.raw/*37.3*/("""}"""),format.raw/*37.4*/("""
+  """),format.raw/*38.3*/("""</script>
 </body>
-</html>
-"""))
+</html>"""))
       }
     }
   }
@@ -80,11 +83,11 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2020-11-04T17:15:04.327850100
+                  DATE: 2020-11-09T23:18:44.965906900
                   SOURCE: D:/uni Projects/PlayWebApplication/app/views/index.scala.html
-                  HASH: 0a2eca6502adc740063fc3a8d3fb7966a00d98b0
-                  MATRIX: 900->1|996->4|1024->6|1128->84|1142->90|1205->133|1942->843|1970->844|2002->849|2054->874|2082->875|2112->878
-                  LINES: 27->1|32->2|34->4|37->7|37->7|37->7|61->31|61->31|62->32|63->33|63->33|64->34
+                  HASH: 20597f7bd0a0da4264b4e9d3148b5d10db10daaa
+                  MATRIX: 900->1|996->4|1023->5|1127->83|1141->89|1204->132|1971->872|1999->873|2031->878|2083->903|2111->904|2141->907
+                  LINES: 27->1|32->2|33->3|36->6|36->6|36->6|65->35|65->35|66->36|67->37|67->37|68->38
                   -- GENERATED --
               */
           

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:D:/uni Projects/PlayWebApplication/conf/routes
-// @DATE:Wed Nov 04 17:18:01 IRST 2020
+// @DATE:Mon Nov 09 22:51:02 IRST 2020
 
 package controllers;
 

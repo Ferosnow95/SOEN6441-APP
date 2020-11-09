@@ -1,7 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mD:\uni Projects\PlayWebApplication\app\views\commonSidebar.scala.html:6:43: value explore is not a member of controllers.ReverseHomeController[0m
-[0m[[0m[31merror[0m] [0m[0m<!--  <li><a href="@routes.HomeController.explore">Play application overview</a>-->[0m
-[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
-[0m[[0m[31merror[0m] [0m[0mD:\uni Projects\PlayWebApplication\app\views\commonSidebar.scala.html:7:43: value tutorial is not a member of controllers.ReverseHomeController[0m
-[0m[[0m[31merror[0m] [0m[0m<!--  <li><a href="@routes.HomeController.tutorial">Implementing Hello World</a>-->[0m
-[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0mD:\uni Projects\PlayWebApplication\app\views\index.scala.html:20:30: not found: value Required[0m
+[0m[[0m[31merror[0m] [0m[0m      <!-- String username, @Required String password -->[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
