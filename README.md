@@ -1,5 +1,8 @@
 # SOEN6441-APP
 
+This is a Term project for the Course Advanced Software Architectures 
+
+
 1st Team member:
 
 Ali Zafar Iqbal, 40076898
@@ -23,4 +26,15 @@ Individual Task: D
 Negin Mohammadzadeh, 40169641
 
 Individual Task: C
-!
+
+
+How to Build
+
+1 : Download SBT : https://www.scala-sbt.org/
+
+2 : Route to Appfolder and run thorough terminal : 
+
+./Sbt compile
+./Sbt Run
+
+3 : Use the app on localhost : 9000
