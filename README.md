@@ -32,7 +32,7 @@ How to Build
 
 1 : Download SBT : https://www.scala-sbt.org/
 
-2 : Route to Appfolder and run thorough terminal : 
+2 : Route to Appfolder and run thorough terminal: 
 
 ./Sbt compile
 ./Sbt Run
