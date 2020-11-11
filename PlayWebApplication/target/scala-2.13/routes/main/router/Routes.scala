@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:D:/uni Projects/PlayWebApplication/conf/routes
-// @DATE:Mon Nov 09 22:51:02 IRST 2020
+// @SOURCE:C:/PlayWebApplication/conf/routes
+// @DATE:Tue Nov 10 22:01:36 EST 2020
 
 package router
 
@@ -16,7 +16,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_1: controllers.HomeController,
-  // @LINE:13
+  // @LINE:14
   Assets_0: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -25,7 +25,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_1: controllers.HomeController,
-    // @LINE:13
+    // @LINE:14
     Assets_0: controllers.Assets
   ) = this(errorHandler, HomeController_1, Assets_0, "/")
 
@@ -43,6 +43,7 @@ class Routes(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """index""", """controllers.HomeController.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """results""", """controllers.HomeController.results()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """profiles""", """controllers.HomeController.profiles()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tweetSearch/""" + "$" + """keywords<[^/]+>""", """controllers.HomeController.tweetSearch(keywords:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
@@ -107,10 +108,28 @@ class Routes(
   )
 
   // @LINE:9
-  private[this] lazy val controllers_HomeController_tweetSearch3_route = Route("GET",
+  private[this] lazy val controllers_HomeController_profiles3_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("profiles")))
+  )
+  private[this] lazy val controllers_HomeController_profiles3_invoker = createInvoker(
+    HomeController_1.profiles(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "profiles",
+      Nil,
+      "GET",
+      this.prefix + """profiles""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:10
+  private[this] lazy val controllers_HomeController_tweetSearch4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tweetSearch/"), DynamicPart("keywords", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_HomeController_tweetSearch3_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_tweetSearch4_invoker = createInvoker(
     HomeController_1.tweetSearch(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -124,11 +143,11 @@ class Routes(
     )
   )
 
-  // @LINE:13
-  private[this] lazy val controllers_Assets_versioned4_route = Route("GET",
+  // @LINE:14
+  private[this] lazy val controllers_Assets_versioned5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned4_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned5_invoker = createInvoker(
     Assets_0.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -164,15 +183,21 @@ class Routes(
       }
   
     // @LINE:9
-    case controllers_HomeController_tweetSearch3_route(params@_) =>
-      call(params.fromPath[String]("keywords", None)) { (keywords) =>
-        controllers_HomeController_tweetSearch3_invoker.call(HomeController_1.tweetSearch(keywords))
+    case controllers_HomeController_profiles3_route(params@_) =>
+      call { 
+        controllers_HomeController_profiles3_invoker.call(HomeController_1.profiles())
       }
   
-    // @LINE:13
-    case controllers_Assets_versioned4_route(params@_) =>
+    // @LINE:10
+    case controllers_HomeController_tweetSearch4_route(params@_) =>
+      call(params.fromPath[String]("keywords", None)) { (keywords) =>
+        controllers_HomeController_tweetSearch4_invoker.call(HomeController_1.tweetSearch(keywords))
+      }
+  
+    // @LINE:14
+    case controllers_Assets_versioned5_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned4_invoker.call(Assets_0.versioned(path, file))
+        controllers_Assets_versioned5_invoker.call(Assets_0.versioned(path, file))
       }
   }
 }

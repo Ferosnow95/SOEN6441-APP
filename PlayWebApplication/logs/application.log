@@ -1,0 +1,14 @@
+2020-11-10 22:16:17,149 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-11-10 22:16:17,180 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
+2020-11-10 22:16:43,550 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-11-10 22:16:43,556 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev) (no global state)

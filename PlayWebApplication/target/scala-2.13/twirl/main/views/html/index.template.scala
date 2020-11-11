@@ -74,6 +74,9 @@ Seq[Any](format.raw/*2.1*/("""
     <div>SOEN 6441</div>
   </div>
 
+
+  <p id="demo"></p>
+
 </div>
 
 
@@ -81,19 +84,19 @@ Seq[Any](format.raw/*2.1*/("""
 <script>
 
   function goTo(url)
-  """),format.raw/*54.3*/("""{"""),format.raw/*54.4*/("""
-    """),format.raw/*55.5*/("""location.replace(url);
-  """),format.raw/*56.3*/("""}"""),format.raw/*56.4*/("""
+  """),format.raw/*57.3*/("""{"""),format.raw/*57.4*/("""
+    """),format.raw/*58.5*/("""location.replace(url);
+  """),format.raw/*59.3*/("""}"""),format.raw/*59.4*/("""
 
-  """),format.raw/*58.3*/("""function search()"""),format.raw/*58.20*/("""{"""),format.raw/*58.21*/("""
-  """),format.raw/*59.3*/("""var searchText = $("#searchInput").val()
+  """),format.raw/*61.3*/("""function search()"""),format.raw/*61.20*/("""{"""),format.raw/*61.21*/("""
+  """),format.raw/*62.3*/("""var searchText = $("#searchInput").val()
 
   window.location.replace("tweetSearch/"+searchText);
-  """),format.raw/*62.3*/("""}"""),format.raw/*62.4*/("""
+  """),format.raw/*65.3*/("""}"""),format.raw/*65.4*/("""
 
 
 
-  """),format.raw/*66.3*/("""</script>
+  """),format.raw/*69.3*/("""</script>
 </body>
 </html>
 """))
@@ -112,11 +115,11 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2020-11-10T20:10:20.955992200
-                  SOURCE: D:/uni Projects/PlayWebApplication/app/views/index.scala.html
-                  HASH: 79d61f49479728043ce92c89c3d9f30591488b8d
-                  MATRIX: 900->1|996->4|1024->6|1634->589|1649->595|1713->638|2524->1422|2552->1423|2584->1428|2636->1453|2664->1454|2695->1458|2740->1475|2769->1476|2799->1479|2924->1577|2952->1578|2985->1584
-                  LINES: 27->1|32->2|34->4|44->14|44->14|44->14|84->54|84->54|85->55|86->56|86->56|88->58|88->58|88->58|89->59|92->62|92->62|96->66
+                  DATE: 2020-11-10T21:50:44.886529300
+                  SOURCE: C:/PlayWebApplication/app/views/index.scala.html
+                  HASH: 68b643ec052c99a796dd886b408f5ae17835bfa8
+                  MATRIX: 900->1|996->4|1024->6|1634->589|1649->595|1713->638|2546->1444|2574->1445|2606->1450|2658->1475|2686->1476|2717->1480|2762->1497|2791->1498|2821->1501|2946->1599|2974->1600|3007->1606
+                  LINES: 27->1|32->2|34->4|44->14|44->14|44->14|87->57|87->57|88->58|89->59|89->59|91->61|91->61|91->61|92->62|95->65|95->65|99->69
                   -- GENERATED --
               */
           

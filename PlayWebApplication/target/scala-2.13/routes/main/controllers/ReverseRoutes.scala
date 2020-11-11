@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:D:/uni Projects/PlayWebApplication/conf/routes
-// @DATE:Mon Nov 09 22:51:02 IRST 2020
+// @SOURCE:C:/PlayWebApplication/conf/routes
+// @DATE:Tue Nov 10 22:01:36 EST 2020
 
 import play.api.mvc.Call
 
@@ -24,7 +24,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "results")
     }
   
-    // @LINE:9
+    // @LINE:10
     def tweetSearch(keywords:String): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "tweetSearch/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("keywords", keywords)))
@@ -44,16 +44,22 @@ package controllers {
     
     }
   
+    // @LINE:9
+    def profiles(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "profiles")
+    }
+  
   }
 
-  // @LINE:13
+  // @LINE:14
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:13
+    // @LINE:14
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))

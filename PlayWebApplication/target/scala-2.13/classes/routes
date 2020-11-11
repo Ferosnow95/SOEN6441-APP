@@ -6,6 +6,7 @@
 GET     /                           controllers.HomeController.index
 GET     /index         controllers.HomeController.index()
 GET     /results           controllers.HomeController.results()
+GET     /profiles           controllers.HomeController.profiles()
 GET    /tweetSearch/:keywords                    controllers.HomeController.tweetSearch(keywords:String)
 
 

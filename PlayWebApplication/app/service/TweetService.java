@@ -10,7 +10,10 @@ import static java.util.stream.Collectors.toList;
 
 public class TweetService {
 
-    public static ArrayList<String> getTweets(String searchKeys) {
+    public TweetService() throws TwitterException {
+    }
+
+    public static ArrayList<String> getTweets( String searchKeys) {
 
         int count=1;
         Twitter twitter = new TwitterFactory().getInstance();
@@ -32,6 +35,31 @@ public class TweetService {
         }
         return tweetList;
     }
+
+    public static class GetHomeTimeline {
+        /**
+         * Usage: java twitter4j.examples.timeline.GetHomeTimeline
+         *
+         * @param args String[]
+         */
+        public static void main(String[] args) {
+            try {
+                // gets Twitter instance with default credentials
+                Twitter twitter = new TwitterFactory().getInstance();
+                User user = twitter.verifyCredentials();
+                List<Status> statuses = twitter.getHomeTimeline();
+                System.out.println("Showing @" + user.getScreenName() + "'s home timeline.");
+                for (Status status : statuses) {
+                    System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText());
+                }
+            } catch (TwitterException te) {
+                te.printStackTrace();
+                System.out.println("Failed to get timeline: " + te.getMessage());
+                System.exit(-1);
+            }
+        }
+    }
+
 
     public static List<String> searchByHashTag(String hashTag) throws TwitterException {
 

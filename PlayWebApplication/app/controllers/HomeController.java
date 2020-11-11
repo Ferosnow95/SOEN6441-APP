@@ -51,6 +51,9 @@ public class HomeController extends Controller {
         return ok(views.html.results.render());
     }
 
+    public Result profiles() {
+        return ok(views.html.profile.render());
+    }
     public Result explore() {
         return ok("hello");
     }

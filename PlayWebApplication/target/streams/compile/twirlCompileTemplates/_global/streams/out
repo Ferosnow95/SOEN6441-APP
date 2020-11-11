@@ -1,3 +1,3 @@
-[0m[[0m[31merror[0m] [0m[0m[Error] D:\uni Projects\PlayWebApplication\app\views\index.scala.html:40[0m
-[0m[[0m[31merror[0m] [0m[0m}: Not parsed?[0m
+[0m[[0m[31merror[0m] [0m[0m[Error] C:\PlayWebApplication\app\views\tweet.scala.html:79[0m
+[0m[[0m[31merror[0m] [0m[0m</html>: Expected ending '}'[0m
 [0m[[0m[31merror[0m] [0m[0m(Compile / [31mtwirlCompileTemplates[0m) Twirl compilation failed[0m

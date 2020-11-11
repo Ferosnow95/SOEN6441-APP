@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:D:/uni Projects/PlayWebApplication/conf/routes
-// @DATE:Mon Nov 09 22:51:02 IRST 2020
+// @SOURCE:C:/PlayWebApplication/conf/routes
+// @DATE:Tue Nov 10 22:01:36 EST 2020
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -29,7 +29,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
+    // @LINE:10
     def tweetSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.tweetSearch",
       """
@@ -53,9 +53,19 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:9
+    def profiles: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.profiles",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profiles"})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:13
+  // @LINE:14
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -63,7 +73,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:14
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
