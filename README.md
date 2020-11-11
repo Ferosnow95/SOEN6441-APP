@@ -1,6 +1,6 @@
 # SOEN6441-APP
 
-This is a Term project for the Course Advanced Software Architectures 
+This is a Term project for the Course Advanced Programming Practises
 
 
 1st Team member:
