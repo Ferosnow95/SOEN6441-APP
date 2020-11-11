@@ -1,0 +1,168 @@
+@()
+<html>
+<head>
+    <title>My search results</title>
+    <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/results.css")'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="modal-container"></div>
+<div class="container">
+    <div class="back-results-arrow-container">
+        <div class="back-arrow-image" onclick="goTo('index')"><img src="assets/images/arrow.svg"></div>
+        <div class="back-arrow-text">Your search results</div>
+    </div>
+    <div class="search-container">
+        <div class="search-container-name">Search Terms</div>
+        <div class="search-input">
+            <input type="text" placeholder="Search Here" value="Montreal Sushi">
+        </div>
+        <div class="search-image"><img src="assets/images/search.svg"></div>
+    </div>
+    <div class="search-result-stats">
+        <div class="search-result-count-title">Search Results:&nbsp;</div>
+        <div class="search-result-count">10</div>
+        &nbsp;&nbsp;| &nbsp;&nbsp;
+        <div class="search-result-sentiment-title">Overall Sentiment:&nbsp;</div>
+        <div class="search-result-sentiment">&#128512; Happy</div>
+    </div>
+
+    <div class="results-container" ></option>
+        <div class="result-container">
+            <div class="result-index">1</div>
+            <div class="result">
+                <div class="result-title" onclick="goTo('profile.html')">results:</div>
+                <div class="result-content">
+                    Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result-index">2</div>
+            <div class="result">
+                <div class="result-title">r.twitterName:</div>
+                <div class="result-title"></div>
+                <div class="result-content">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="result-container">
+            <div class="result-index">3</div>
+            <div class="result">
+                <div class="result-title">Tweeter Handle:</div>
+                <div class="result-content">
+                    Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result-index">4</div>
+            <div class="result">
+                <div class="result-title">Tweeter Handle:</div>
+                <div class="result-content">
+                    Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result-index">5</div>
+            <div class="result">
+                <div class="result-title">Tweeter Handle:</div>
+                <div class="result-content">
+                    Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result-index">6</div>
+            <div class="result">
+                <div class="result-title">Tweeter Handle:</div>
+                <div class="result-content">
+                    Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result-index">7</div>
+            <div class="result">
+                <div class="result-title">Tweeter Handle:</div>
+                <div class="result-content">
+                    Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result-index">8</div>
+            <div class="result">
+                <div class="result-title">Tweeter Handle:</div>
+                <div class="result-content">
+                    Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result-index">9</div>
+            <div class="result">
+                <div class="result-title">Tweeter Handle:</div>
+                <div class="result-content">
+                    Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result-index" id="test1">10</div>
+            <div class="result">
+                <div class="result-title">Tweeter Handle:</div>
+                <div class="result-content">
+                    Process the results using the Java 8+ Streams API to add hyperlinks to user names, locations (if available), and hashtags (used in the individual parts detailed below).Note: for this assignment, you do not need to stream updates to the user interface. In other words, thefront-end page is static until a “refresh” (or new search) is triggered.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button onclick="test()">test</button>
+<script>
+
+    function test(){
+      alert("JQ Test");
+      $("#test").html("testtesttest")
+      }
+
+
+  function goTo(url)
+  {
+    location.replace(url);
+  }
+
+  function showmodal(id,category){
+    var url = "profile.html";
+    $('.modal-container').load(url,{},function(result){
+            $('#myModal').modal({show:true});
+    });
+  }
+
+  </script>
+
+</body>
+
+</html>
+
+

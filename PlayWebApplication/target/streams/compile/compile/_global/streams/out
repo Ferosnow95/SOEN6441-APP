@@ -1,0 +1,8 @@
+[0m[[0m[31merror[0m] [0m[0mD:\uni Projects\PlayWebApplication\app\controllers\HomeController.java:44:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method form(java.lang.Class<java.lang.String>)[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class controllers.HomeController[0m
+[0m[[0m[31merror[0m] [0m[0mform[0m
+[0m[[0m[31merror[0m] [0m[0mD:\uni Projects\PlayWebApplication\app\controllers\HomeController.java:45:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method form(java.lang.Class<models.TwitterResultModel>)[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class controllers.HomeController[0m
+[0m[[0m[31merror[0m] [0m[0mform[0m
