@@ -12,11 +12,11 @@ import static java.util.stream.Collectors.toList;
 
 public class HashtagService {
 
-    public static CompletableFuture<List<Tweet>> getHashtagAsync(String keyWords) {
+    public CompletableFuture<List<Tweet>> getHashtagAsync(String keyWords) {
 
         return CompletableFuture.supplyAsync(() -> {
             try {
-                return searchByHashTag(keyWords);
+                return this.searchByHashTag(keyWords);
 
             } catch (TwitterException e) {
                 e.printStackTrace();
@@ -25,7 +25,7 @@ public class HashtagService {
         });
     }
 
-    public static List<Tweet> searchByHashTag(String hashTag) throws TwitterException {
+    public  List<Tweet> searchByHashTag(String hashTag) throws TwitterException {
 
         Twitter twitter = new TwitterFactory().getInstance();
         QueryResult result = twitter.search(new Query("#"+hashTag));

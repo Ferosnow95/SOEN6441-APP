@@ -6,6 +6,7 @@ import twitter4j.Status;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Tweet {
   public long id;
@@ -42,6 +43,22 @@ public class Tweet {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tweet tweet = (Tweet) o;
+        return id == tweet.id &&
+                Objects.equals(screenName, tweet.screenName) &&
+                Objects.equals(content, tweet.content) &&
+                Objects.equals(date, tweet.date) &&
+                Objects.equals(hashTags, tweet.hashTags);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, screenName, content, date, hashTags);
+    }
 
     public static Tweet reform(Status status) {
 

@@ -15,6 +15,8 @@ import java.util.List;
 
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -23,9 +25,7 @@ public class HashtagServiceTest {
       @Mock
       HashtagService hashtagService;
 
-    @BeforeEach
-            void getData() throws TwitterException {
-                when(hashtagService.searchByHashTag("java")).thenReturn(expected);}
+
 
 
        List<String> hashTagsTrue= Arrays.asList("#java");
@@ -38,9 +38,9 @@ public class HashtagServiceTest {
             new Tweet("@oracle"," the best way to prectice java", hashTagsTrue)
 
     );
-    public List<Tweet> expected1 = Arrays.asList(
-            new Tweet("@gurshD"," A great book for non-tech folk hoping to learn programming", hashTagsTrue)
-    );
+    public Tweet expected1 =
+            new Tweet("@gurshD"," A great book for non-tech folk hoping to learn programming", hashTagsTrue);
+
     public List<Tweet> notExpected = Arrays.asList(
             new Tweet("@sarah"," concordia university in canada", hashTagsFales),
             new Tweet("@john"," canada accident rate", hashTagsFales)
@@ -65,11 +65,12 @@ public class HashtagServiceTest {
     @Test
     public void searchByHashTag() throws Exception {
 
+        when(hashtagService.searchByHashTag("java")).thenReturn(expected);
 
-
-        assertThat(hashtagService.searchByHashTag("java")).containsExactly((Tweet) expected1);
-
-//        assertNotSame(twitterService.searchByHashTag("java"),notExpected);
+        assertEquals(hashtagService.searchByHashTag("java").size(),3);
+        assertEquals(hashtagService.searchByHashTag("java"),expected);
+        assertNotEquals(hashtagService.searchByHashTag("java"),notExpected);
+//
     }
 
 
