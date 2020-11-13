@@ -39,41 +39,7 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f18e7501-66fa-41c1-8dc0-bae679509799" name="Default Changelist" comment="hashTag test cases">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Tweet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/TweetHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/TwitterResultModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/service/HashtagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/HashtagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/service/TweetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/service/TweetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/controllers/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/models/Tweet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/models/Tweet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/service/HashtagService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/service/HashtagService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/views/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/views/results.scala.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/controllers/HashtagServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/controllers/HashtagServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/controllers/MyTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/_global/streams/sync-exported-assets-web-assets" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/_global/streams/sync-exported-assets-web-assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/_global/playCommonClassloader/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/playCommonClassloader/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileOutputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileSourceFileInputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/_global/_global/compileSourceFileInputs/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/_global/_global/managedSourcePaths/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/_global/_global/managedSourcePaths/previous" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compile/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compile/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/_global/streams/inc_compile_2.13.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/_global/streams/inc_compile_2.13.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/_global/streams/copy-resources" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/_global/streams/copy-resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/playRoutes/_global/streams/op-cache" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/playRoutes/_global/streams/op-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/_global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/web-assets/assets/_global/streams/sync-assets-web-assets" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/web-assets/assets/_global/streams/sync-assets-web-assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/HashtagServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/HashtagServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/AppTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="f18e7501-66fa-41c1-8dc0-bae679509799" name="Default Changelist" comment="hashTag test cases" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605299052091</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hashTag test cases">
+      <created>1605303807938</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605303807938</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,33 +201,33 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="372" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605303541351" />
-    <state width="1237" height="182" key="GridCell.Tab.0.bottom" timestamp="1605301422554">
+    <state width="1237" height="181" key="GridCell.Tab.0.bottom" timestamp="1605303661132">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605301422554" />
-    <state width="1237" height="182" key="GridCell.Tab.0.center" timestamp="1605301422553">
+    <state width="1237" height="181" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605303661132" />
+    <state width="1237" height="181" key="GridCell.Tab.0.center" timestamp="1605303661132">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605301422553" />
-    <state width="1237" height="182" key="GridCell.Tab.0.left" timestamp="1605301422553">
+    <state width="1237" height="181" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605303661132" />
+    <state width="1237" height="181" key="GridCell.Tab.0.left" timestamp="1605303661132">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605301422553" />
-    <state width="1237" height="182" key="GridCell.Tab.0.right" timestamp="1605301422554">
+    <state width="1237" height="181" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605303661132" />
+    <state width="1237" height="181" key="GridCell.Tab.0.right" timestamp="1605303661132">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="182" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605301422554" />
+    <state width="1237" height="181" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605303661132" />
     <state x="365" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1605294949358">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="365" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1605294949358" />
-    <state x="460" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605299075712">
+    <state x="460" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605303987762">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="460" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1605299075712" />
+    <state x="460" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1605303987762" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/play_java_hello_world_tutorial$controllers_in_play_java_hello_world_tutorial.ic" NAME="controllers in play-java-hello-world-tutorial Coverage Results" MODIFIED="1605299202589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/play_java_hello_world_tutorial$controllers_in_play_java_hello_world_tutorial.ic" NAME="controllers in play-java-hello-world-tutorial Coverage Results" MODIFIED="1605303660827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>controllers.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/play_java_hello_world_tutorial$HashtagServiceTest.ic" NAME="HashtagServiceTest Coverage Results" MODIFIED="1605297820845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
