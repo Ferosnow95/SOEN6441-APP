@@ -1,0 +1,4 @@
+[debug] "not up to date. inChanged = true, force = false
+[debug] Updating ProjectRef(uri("file:/D:/uni%20Projects/Git/New%20folder/SOEN6441-APP/PlayWebApplication/"), "root")...
+[debug] Done updating ProjectRef(uri("file:/D:/uni%20Projects/Git/New%20folder/SOEN6441-APP/PlayWebApplication/"), "root")
+[warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.

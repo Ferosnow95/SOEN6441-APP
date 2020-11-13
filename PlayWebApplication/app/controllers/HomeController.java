@@ -7,7 +7,9 @@ import models.TwitterResultModel;
 import play.api.data.Form;
 import play.api.data.Forms;
 import play.mvc.*;
+import service.HashtagService;
 import service.TweetService;
+import service.WordsFrequencyService;
 import twitter4j.*;
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -33,24 +35,54 @@ import static java.util.stream.Collectors.toList;
 public class HomeController extends Controller {
 
 
-    private TweetService tweetService = new TweetService();
+    private WordsFrequencyService wordsFrequencyService;
+    private TweetService tweetService;
+    private HashtagService hashtagService;
 
     public HomeController() throws TwitterException {
+        tweetService = new TweetService();
+        hashtagService= new HashtagService();
+        wordsFrequencyService =new WordsFrequencyService();
     }
 
-    public Result tweetSearch(String keyWords) {
+    /**
+     * An action that renders an HTML page with a welcome message.
+     * The configuration in the <code>routes</code> file means that
+     * this method will be called when the application receives a
+     * <code>GET</code> request with a path of <code>/</code>.
+     */
+    public CompletionStage<Result> tweetSearch(String keyWords) throws Exception {
 
-        ArrayList<Tweet> tweetList= tweetService.getTweets(keyWords);
-        return ok(views.html.tweet.render(tweetList));
+        CompletableFuture<List<Tweet>> futureTweetList = tweetService.getTweetsAsync(keyWords);
 
+//         CompletionStage<Result> futureResult = futureTweetList.thenApplyAsync( pi -> ok(views.html.tweet.render(pi)));
+        return futureTweetList.thenApplyAsync( result-> ok(views.html.tweet.render(result)));
     }
+
+    /**
+     * this method is to redirect user for the result of a specific hashtag selected
+     * @author Negin
+     * @param keyWords
+     * @return
+     * @throws Exception
+     */
+    public CompletionStage<Result> hashtag(String keyWords) throws Exception {
+
+        CompletionStage<List<Tweet>> futureHashtagList = hashtagService.getHashtagAsync("#"+keyWords);
+
+        return futureHashtagList.thenApplyAsync( pi -> ok(views.html.hashtagResults.render(pi)));
+    }
+
+    /**
+     * @param keywords search term got through url parameter
+     * @return each unique word frequency in descending order
+     */
+    public CompletionStage<Result> frequency(String keywords){
+        return  CompletableFuture.supplyAsync(()-> Results.ok(views.html.frequency.render(keywords,CollectionConverters.asScala(wordsFrequencyService.countFrequency(keywords).iterator()).toSeq())));
+    }
+
 
     public Result index() {
-
-//        Form<String> keyword= form(String.class);
-//        form(TwitterResultModel.class).bindFromRequest();
-
-
 
         return ok(views.html.index.render());
     }
@@ -64,49 +96,5 @@ public class HomeController extends Controller {
         return ok("hello");
     }
 
-
-
-
-
-
-
-//    private final AssetsFinder assetsFinder;
-//
-//    private HttpExecutionContext exec;
-//
-//    @Inject
-//    public HomeController(AssetsFinder assetsFinder, HttpExecutionContext exec) {
-//        this.exec = exec;
-//        this.assetsFinder = assetsFinder;
-//
-//
-//        public Result index () {
-//            return ok(views.html.index.render());
-//        }
-////        public CompletionStage<Result> results (List < TwitterResultModel > results) {
-////
-////            return CompletableFuture.supplyAsync(() -> {
-////                try {
-////                    return Results.ok(views.html.results.render(results, CollectionConverters.asScala(TweetHandler.searchByHashTag("#montreal").iterator()).toSeq(), assetsFinder));
-////                } catch (TwitterException e) {
-////                    e.printStackTrace();
-////                    return 0;
-////                }
-////            }, exec.current());
-////
-////        }
-//    }
-//    public Result results() throws TwitterException {
-////        int count=1;
-////        String keyWords = "#montreal";
-////        List<Status> tweets1= searchByHashTag(keyWords);
-////        for(Status tweet : tweets1) {
-////
-////            System.out.println("Tweet "+ count+ " . "+ tweet.getUser().getName() + ":" + tweet.getText() +"  "+ tweet.getHashtagEntities());
-////            count++;
-////        }
-//
-//        return  ok(views.html.results.render());
-//    }
 
 }

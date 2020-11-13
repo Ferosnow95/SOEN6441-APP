@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/PlayWebApplication/conf/routes
-// @DATE:Thu Nov 12 20:14:01 EST 2020
+// @SOURCE:D:/uni Projects/Git/New folder/SOEN6441-APP/PlayWebApplication/conf/routes
+// @DATE:Fri Nov 13 20:21:42 IRST 2020
 
 package router
 
@@ -16,7 +16,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_1: controllers.HomeController,
-  // @LINE:13
+  // @LINE:14
   Assets_0: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -25,7 +25,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_1: controllers.HomeController,
-    // @LINE:13
+    // @LINE:14
     Assets_0: controllers.Assets
   ) = this(errorHandler, HomeController_1, Assets_0, "/")
 
@@ -44,6 +44,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """index""", """controllers.HomeController.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """profile/""" + "$" + """user<[^/]+>""", """controllers.HomeController.profile(user:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tweetSearch/""" + "$" + """keywords<[^/]+>""", """controllers.HomeController.tweetSearch(keywords:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """hashtag/""" + "$" + """keywords<[^/]+>""", """controllers.HomeController.hashtag(keywords:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """frequency""", """controllers.HomeController.frequency(keywords:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -124,11 +126,47 @@ class Routes(
     )
   )
 
-  // @LINE:13
-  private[this] lazy val controllers_Assets_versioned4_route = Route("GET",
+  // @LINE:10
+  private[this] lazy val controllers_HomeController_hashtag4_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("hashtag/"), DynamicPart("keywords", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_HomeController_hashtag4_invoker = createInvoker(
+    HomeController_1.hashtag(fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "hashtag",
+      Seq(classOf[String]),
+      "GET",
+      this.prefix + """hashtag/""" + "$" + """keywords<[^/]+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:11
+  private[this] lazy val controllers_HomeController_frequency5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("frequency")))
+  )
+  private[this] lazy val controllers_HomeController_frequency5_invoker = createInvoker(
+    HomeController_1.frequency(fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "frequency",
+      Seq(classOf[String]),
+      "GET",
+      this.prefix + """frequency""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:14
+  private[this] lazy val controllers_Assets_versioned6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned4_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned6_invoker = createInvoker(
     Assets_0.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -169,10 +207,22 @@ class Routes(
         controllers_HomeController_tweetSearch3_invoker.call(HomeController_1.tweetSearch(keywords))
       }
   
-    // @LINE:13
-    case controllers_Assets_versioned4_route(params@_) =>
+    // @LINE:10
+    case controllers_HomeController_hashtag4_route(params@_) =>
+      call(params.fromPath[String]("keywords", None)) { (keywords) =>
+        controllers_HomeController_hashtag4_invoker.call(HomeController_1.hashtag(keywords))
+      }
+  
+    // @LINE:11
+    case controllers_HomeController_frequency5_route(params@_) =>
+      call(params.fromQuery[String]("keywords", None)) { (keywords) =>
+        controllers_HomeController_frequency5_invoker.call(HomeController_1.frequency(keywords))
+      }
+  
+    // @LINE:14
+    case controllers_Assets_versioned6_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned4_invoker.call(Assets_0.versioned(path, file))
+        controllers_Assets_versioned6_invoker.call(Assets_0.versioned(path, file))
       }
   }
 }

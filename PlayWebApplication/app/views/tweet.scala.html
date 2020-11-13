@@ -48,6 +48,13 @@
                         <div class="result-content">
                             @resultList(i).content
                        </div>
+                        <div class="result-content">
+                        @for(h <- resultList(i).hashTags) {
+                        <a href="@routes.HomeController.hashtag(h)">@h</a>
+                        }
+                        </div>
+
+
                     </div>
                 </div>
                 }

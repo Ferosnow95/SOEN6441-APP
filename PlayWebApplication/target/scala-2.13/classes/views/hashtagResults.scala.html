@@ -1,0 +1,73 @@
+@(resultList: List[Tweet])
+<html>
+<head>
+    <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/results.css")'>
+    <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/profile.css")'>
+    <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/bootstrap.css")'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="body-container">
+    <div class="body-container-content">
+        <div class="results-container" >
+            @for(i <- 0 until resultList.length) {
+            <div class="result-container">
+                <div class="result-index">@(i+1)</div>
+                <div class="result">
+                    <div class="result-title" onclick="showProfile('@resultList(i).screenName')"> @('@'+resultList(i).screenName)</div>
+                    <div class="result-content">
+                        @resultList(i).content
+                    </div>
+                    <div class="result-content">
+                        @for(h <- resultList(i).hashTags) {
+                        <a href="@routes.HomeController.hashtag(h)">@h</a>
+                        }
+                    </div>
+
+
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    function goTo(url)
+    {
+      location.replace(url);
+    }
+
+
+    function getprofile() {
+
+        var profile = $("#searchInput").val()
+
+        window.location.replace("profile/");
+        }
+
+    function goBack() {
+        window.location.replace("http://localhost:9000/");
+        }
+
+        function search(){
+  var searchText = $("#searchInput").val()
+
+  window.location.replace(searchText);
+  }
+
+
+
+
+    </script>
+
+</body>
+</html>

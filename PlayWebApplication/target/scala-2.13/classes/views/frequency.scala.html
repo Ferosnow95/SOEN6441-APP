@@ -1,0 +1,36 @@
+@(searchTerm:String)(implicit wordFrequency: Seq[WordsFrequency])
+
+<html>
+<head>
+    <title>My search results</title>
+    <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/css/results.css")'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            table, th, td {
+                border: 1px solid black;
+
+            }
+            table {
+                border-spacing: 0px;
+            }
+        </style>
+</head>
+<body>
+<h1 style="margin-left: 50px">Word Frequency Statistics</h1>
+<h3 style="margin-left: 50px">Search Term: @searchTerm</h3>
+
+<table style="margin-left: 50px">
+    <thead>
+    <tr><th>Word</th><th>Freqency</th>
+    </thead>
+    <tbody>
+    @for(w <- wordFrequency) {
+    <tr>
+        <td style="text-align: center">@w.word</td><td style="text-align: center">@w.frequency</td>
+    </tr>
+    }
+    </tbody>
+</table>
+</body>
+
+</html>
