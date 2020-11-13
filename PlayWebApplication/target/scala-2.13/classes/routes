@@ -7,8 +7,7 @@ GET     /                           controllers.HomeController.index
 GET     /index         controllers.HomeController.index
 GET     /profile/:user        controllers.HomeController.profile(user:String)
 GET    /tweetSearch/:keywords                    controllers.HomeController.tweetSearch(keywords:String)
-GET    /hashtag/:keywords                    controllers.HomeController.hashtag(keywords:String)
-GET    /frequency                    controllers.HomeController.frequency(keywords:String)
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -2,6 +2,12 @@ package models;
 
 import java.util.ArrayList;
 
+/**
+ * Profile Constructor
+ * @author Ali Zafar Iqbal
+ * @date 2020-11-13
+ */
+
 public class Profile {
   public String name;
   public String screenName;

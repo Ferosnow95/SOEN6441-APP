@@ -1,4 +1,4 @@
 [0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(D:\uni Projects\Git\New folder\SOEN6441-APP\PlayWebApplication\conf\application.conf,D:\uni Projects\Git\New folder\SOEN6441-APP\PlayWebApplication\target\scala-2.13\classes\application.conf)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(D:\uni Projects\Git\New folder\SOEN6441-APP\PlayWebApplication\conf\logback.xml,D:\uni Projects\Git\New folder\SOEN6441-APP\PlayWebApplication\target\scala-2.13\classes\logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(D:\uni Projects\Git\New folder\SOEN6441-APP\PlayWebApplication\conf\routes,D:\uni Projects\Git\New folder\SOEN6441-APP\PlayWebApplication\target\scala-2.13\classes\routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\New folder (3)\PlayWebApplication\conf\application.conf,C:\New folder (3)\PlayWebApplication\target\scala-2.13\classes\application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\New folder (3)\PlayWebApplication\conf\logback.xml,C:\New folder (3)\PlayWebApplication\target\scala-2.13\classes\logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\New folder (3)\PlayWebApplication\conf\routes,C:\New folder (3)\PlayWebApplication\target\scala-2.13\classes\routes)[0m

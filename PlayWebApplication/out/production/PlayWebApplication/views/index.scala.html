@@ -1,0 +1,74 @@
+@()
+
+
+<html>
+<head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <title>My search page</title>
+  <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/search.css")'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<div class="container">
+  <div class="top-image">
+    <img src="/assets/images/top-icon.svg">
+  </div>
+  <div class="welcome-title">Welcome To Tweet Analytics</div>
+  <div class="welcome-subtitle">Start searching tweets</div>
+
+
+
+
+  <div class="search-container">
+    <div class="search-input">
+
+      <input type="text" name="keyword" name="search_text" id="searchInput" placeholder="Search Here">
+    </div>
+
+    <div class="search-image" onclick="search()" ><img src="/assets/images/search.svg"> Search</div>
+  </div>
+
+
+
+  <div class="welcome-footer">
+    <div>Team Project</div>
+    <div>Team HG.005</div>
+    <div>SOEN 6441</div>
+  </div>
+
+
+  <p id="demo"></p>
+
+</div>
+
+
+
+<script>
+  var input = document.getElementById("searchInput");
+  function search(){
+    if(input.value.trim() !== '')
+    {
+      window.location.replace("tweetSearch/"+input.value);
+    }
+  }
+
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    search();
+  }
+});
+
+
+  </script>
+</body>
+</html>

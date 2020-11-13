@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:D:/uni Projects/Git/New folder/SOEN6441-APP/PlayWebApplication/conf/routes
-// @DATE:Fri Nov 13 20:21:42 IRST 2020
+// @SOURCE:C:/New folder (3)/PlayWebApplication/conf/routes
+// @DATE:Fri Nov 13 16:36:02 EST 2020
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -39,26 +39,6 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
-    def frequency: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.frequency",
-      """
-        function(keywords0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "frequency" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("keywords", keywords0)])})
-        }
-      """
-    )
-  
-    // @LINE:10
-    def hashtag: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.hashtag",
-      """
-        function(keywords0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hashtag/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("keywords", keywords0))})
-        }
-      """
-    )
-  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
@@ -75,7 +55,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:14
+  // @LINE:13
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -83,7 +63,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:14
+    // @LINE:13
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sbt-javaagent1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/null/Coursier/cache/v1/https/repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.lightbend.sbt/sbt-javaagent/scala_2.12/sbt_1.0/0.1.5/jars/sbt-javaagent.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

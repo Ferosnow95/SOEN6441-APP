@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sbt-twirl">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-twirl/scala_2.12/sbt_1.0/1.5.0/jars/sbt-twirl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

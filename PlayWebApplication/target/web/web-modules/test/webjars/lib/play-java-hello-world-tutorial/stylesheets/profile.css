@@ -8,14 +8,17 @@ body
 }
 .modal-dialog
 {
+  min-width: 90%;
   width: 90%;
+  max-width: 90%;
   margin: 0 auto 0 auto;
 }
 .modal-content
 {
   display: flex;
   flex-flow: column;
- 
+  height: fit-content;
+  padding: 10px 30px 10px 30px;
 }
 
 .top-line
@@ -48,8 +51,9 @@ body
   border: 5px solid #000000;
   overflow: hidden;
   margin-right: 55px;
-  height: fit-content;
-  width: fit-content;
+  width: 199px;
+  min-width: 199px;
+  height: 199px;
 }
 .profile-picture > img
 {
@@ -61,7 +65,7 @@ body
 {
   display: flex;
   flex-flow: column;
-  width: 690px;
+  width: 100%;
 }
 
 .profile-info-header
@@ -186,4 +190,7 @@ button, button:active, button:focus
 {
   outline: none;
   box-shadow: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }

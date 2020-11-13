@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sbt-js-engine">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-js-engine/scala_2.12/sbt_1.0/1.2.3/jars/sbt-js-engine.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
