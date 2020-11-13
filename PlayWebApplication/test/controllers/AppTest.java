@@ -6,7 +6,7 @@ import play.twirl.api.Content;
 import static org.junit.Assert.*;
 import javax.swing.text.AbstractDocument;
 
-public class MyTest  extends WithApplication {
+public class AppTest extends WithApplication {
      @Test
     public void renderTemplate(){
          Content html= views.html.index.render();

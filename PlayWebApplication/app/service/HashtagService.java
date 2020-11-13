@@ -1,7 +1,6 @@
 package service;
 
 import models.Tweet;
-import models.TwitterResultModel;
 import twitter4j.*;
 
 import java.util.Arrays;

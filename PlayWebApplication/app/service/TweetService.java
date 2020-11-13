@@ -2,18 +2,14 @@ package service;
 
 import models.Profile;
 import models.Tweet;
-import models.TwitterResultModel;
 import twitter4j.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.text.DateFormatter;
-
 import static java.util.stream.Collectors.toList;
 import static models.Tweet.reform;
 
-import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
@@ -123,23 +119,6 @@ public class TweetService {
         return new Profile(name, screenName, description, followers, following, link, dateJoined, tweets, imageLink);
     }
 
-
-    public static List<String> searchByHashTag(String hashTag) throws TwitterException {
-
-        Twitter twitter = new TwitterFactory().getInstance();
-        QueryResult result = twitter.search(new Query(hashTag));
-
-        List<String> tweetList = result.getTweets().stream()
-                .limit(10)
-                .sorted()
-                .map(s -> {
-                    return new TwitterResultModel().toString();
-                })
-                .collect(toList());
-        ;
-
-        return tweetList;
-    }
 }
 
 

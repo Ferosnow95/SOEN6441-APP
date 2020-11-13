@@ -1,4 +1,9 @@
+[0m[[0m[33mwarn[0m] [0m[0mD:\uni Projects\Git\New folder\SOEN6441-APP\PlayWebApplication\app\views\hashtagResults.scala.html:22:104: method + in class Char is deprecated (since 2.13.0): Adding a number and a String is deprecated. Use the string interpolation `s"$num$str"`[0m
+[0m[[0m[33mwarn[0m] [0m[0m                    <div class="result-title" onclick="showProfile('@resultList(i).screenName')"> @('@'+resultList(i).screenName)</div>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                                                       ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mD:\uni Projects\Git\New folder\SOEN6441-APP\PlayWebApplication\app\views\tweet.scala.html:47:108: method + in class Char is deprecated (since 2.13.0): Adding a number and a String is deprecated. Use the string interpolation `s"$num$str"`[0m
 [0m[[0m[33mwarn[0m] [0m[0m                        <div class="result-title" onclick="showProfile('@resultList(i).screenName')"> @('@'+resultList(i).screenName)</div>[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                                                                                           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[0minfo[0m] [0m[0mC:\Users\Negin\Documents\GitHub\SOEN6441-APP\PlayWebApplication\app\service\SentimentService.java: C:\Users\Negin\Documents\GitHub\SOEN6441-APP\PlayWebApplication\app\service\SentimentService.java uses unchecked or unsafe operations.[0m
+[0m[[0m[0minfo[0m] [0m[0mC:\Users\Negin\Documents\GitHub\SOEN6441-APP\PlayWebApplication\app\service\SentimentService.java: Recompile with -Xlint:unchecked for details.[0m

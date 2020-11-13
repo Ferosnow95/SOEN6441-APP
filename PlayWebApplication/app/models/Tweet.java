@@ -60,6 +60,7 @@ public class Tweet {
         return Objects.hash(id, screenName, content, date, hashTags);
     }
 
+
     public static Tweet reform(Status status) {
 
         Tweet tweet = new Tweet();

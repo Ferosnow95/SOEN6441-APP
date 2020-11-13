@@ -2,30 +2,19 @@ package controllers;
 
 import models.Tweet;
 import models.Profile;
-import models.TweetHandler;
-import models.TwitterResultModel;
-import play.api.data.Form;
-import play.api.data.Forms;
-import play.mvc.*;
 import service.HashtagService;
 import service.TweetService;
 import service.WordsFrequencyService;
 import twitter4j.*;
-import javax.inject.Inject;
-import javax.inject.Singleton;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
-import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
 import scala.jdk.javaapi.CollectionConverters;
-
-import static java.util.stream.Collectors.toList;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -60,7 +49,7 @@ public class HomeController extends Controller {
     }
 
     /**
-     * this method is to redirect user for the result of a specific hashtag selected
+     * redirects user to a single page of 10 latest tweets of the selected hashtag
      * @author Negin
      * @param keyWords
      * @return
