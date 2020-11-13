@@ -4,9 +4,8 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
-GET     /index         controllers.HomeController.index()
-GET     /results           controllers.HomeController.results()
-GET     /profiles           controllers.HomeController.profiles()
+GET     /index         controllers.HomeController.index
+GET     /profile/:user        controllers.HomeController.profile(user:String)
 GET    /tweetSearch/:keywords                    controllers.HomeController.tweetSearch(keywords:String)
 
 

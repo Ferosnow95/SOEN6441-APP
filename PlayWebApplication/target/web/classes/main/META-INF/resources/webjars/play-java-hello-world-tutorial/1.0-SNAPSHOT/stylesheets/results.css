@@ -104,6 +104,7 @@ body{
   width: 96px;
   height: 100%;
   margin-left: auto;
+  cursor: pointer;
 }
 .search-image > img
 {

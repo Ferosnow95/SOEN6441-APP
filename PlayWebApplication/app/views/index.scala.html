@@ -19,7 +19,7 @@
 
 <div class="container">
   <div class="top-image">
-    <img src="assets/images/top-icon.svg">
+    <img src="/assets/images/top-icon.svg">
   </div>
   <div class="welcome-title">Welcome To Tweet Analytics</div>
   <div class="welcome-subtitle">Start searching tweets</div>
@@ -33,7 +33,7 @@
       <input type="text" name="keyword" name="search_text" id="searchInput" placeholder="Search Here">
     </div>
 
-    <button class="search-image" onclick="search()" ><img src="assets/images/search.svg"> Search</button>
+    <div class="search-image" onclick="search()" ><img src="/assets/images/search.svg"> Search</div>
   </div>
 
 
@@ -52,18 +52,21 @@
 
 
 <script>
-
-  function goTo(url)
-  {
-    location.replace(url);
-  }
-
+  var input = document.getElementById("searchInput");
   function search(){
-  var searchText = $("#searchInput").val()
-
-  window.location.replace("tweetSearch/"+searchText);
+    if(input.value.trim() !== '')
+    {
+      window.location.replace("tweetSearch/"+input.value);
+    }
   }
 
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    search();
+  }
+});
 
 
   </script>

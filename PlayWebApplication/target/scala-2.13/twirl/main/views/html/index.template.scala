@@ -49,7 +49,7 @@ Seq[Any](format.raw/*2.1*/("""
 
 <div class="container">
   <div class="top-image">
-    <img src="assets/images/top-icon.svg">
+    <img src="/assets/images/top-icon.svg">
   </div>
   <div class="welcome-title">Welcome To Tweet Analytics</div>
   <div class="welcome-subtitle">Start searching tweets</div>
@@ -63,7 +63,7 @@ Seq[Any](format.raw/*2.1*/("""
       <input type="text" name="keyword" name="search_text" id="searchInput" placeholder="Search Here">
     </div>
 
-    <button class="search-image" onclick="search()" ><img src="assets/images/search.svg"> Search</button>
+    <div class="search-image" onclick="search()" ><img src="/assets/images/search.svg"> Search</div>
   </div>
 
 
@@ -82,21 +82,24 @@ Seq[Any](format.raw/*2.1*/("""
 
 
 <script>
-
-  function goTo(url)
-  """),format.raw/*57.3*/("""{"""),format.raw/*57.4*/("""
-    """),format.raw/*58.5*/("""location.replace(url);
-  """),format.raw/*59.3*/("""}"""),format.raw/*59.4*/("""
-
-  """),format.raw/*61.3*/("""function search()"""),format.raw/*61.20*/("""{"""),format.raw/*61.21*/("""
-  """),format.raw/*62.3*/("""var searchText = $("#searchInput").val()
-
-  window.location.replace("tweetSearch/"+searchText);
-  """),format.raw/*65.3*/("""}"""),format.raw/*65.4*/("""
+  var input = document.getElementById("searchInput");
+  function search()"""),format.raw/*56.20*/("""{"""),format.raw/*56.21*/("""
+    """),format.raw/*57.5*/("""if(input.value.trim() !== '')
+    """),format.raw/*58.5*/("""{"""),format.raw/*58.6*/("""
+      """),format.raw/*59.7*/("""window.location.replace("tweetSearch/"+input.value);
+    """),format.raw/*60.5*/("""}"""),format.raw/*60.6*/("""
+  """),format.raw/*61.3*/("""}"""),format.raw/*61.4*/("""
 
 
+"""),format.raw/*64.1*/("""input.addEventListener("keyup", function(event) """),format.raw/*64.49*/("""{"""),format.raw/*64.50*/("""
+  """),format.raw/*65.3*/("""if (event.keyCode === 13) """),format.raw/*65.29*/("""{"""),format.raw/*65.30*/("""
+    """),format.raw/*66.5*/("""event.preventDefault();
+    search();
+  """),format.raw/*68.3*/("""}"""),format.raw/*68.4*/("""
+"""),format.raw/*69.1*/("""}"""),format.raw/*69.2*/(""");
 
-  """),format.raw/*69.3*/("""</script>
+
+  </script>
 </body>
 </html>
 """))
@@ -115,11 +118,11 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2020-11-10T21:50:44.886529300
+                  DATE: 2020-11-11T15:25:52.300315100
                   SOURCE: C:/PlayWebApplication/app/views/index.scala.html
-                  HASH: 68b643ec052c99a796dd886b408f5ae17835bfa8
-                  MATRIX: 900->1|996->4|1024->6|1634->589|1649->595|1713->638|2546->1444|2574->1445|2606->1450|2658->1475|2686->1476|2717->1480|2762->1497|2791->1498|2821->1501|2946->1599|2974->1600|3007->1606
-                  LINES: 27->1|32->2|34->4|44->14|44->14|44->14|87->57|87->57|88->58|89->59|89->59|91->61|91->61|91->61|92->62|95->65|95->65|99->69
+                  HASH: 60b8184634238438d1bcf60779da08b67cf63224
+                  MATRIX: 900->1|996->4|1024->6|1634->589|1649->595|1713->638|2592->1489|2621->1490|2653->1495|2714->1529|2742->1530|2776->1537|2860->1594|2888->1595|2918->1598|2946->1599|2976->1602|3052->1650|3081->1651|3111->1654|3165->1680|3194->1681|3226->1686|3293->1726|3321->1727|3349->1728|3377->1729
+                  LINES: 27->1|32->2|34->4|44->14|44->14|44->14|86->56|86->56|87->57|88->58|88->58|89->59|90->60|90->60|91->61|91->61|94->64|94->64|94->64|95->65|95->65|95->65|96->66|98->68|98->68|99->69|99->69
                   -- GENERATED --
               */
           

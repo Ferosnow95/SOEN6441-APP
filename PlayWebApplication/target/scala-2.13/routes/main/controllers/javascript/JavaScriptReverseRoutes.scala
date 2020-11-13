@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/PlayWebApplication/conf/routes
-// @DATE:Tue Nov 10 22:01:36 EST 2020
+// @DATE:Thu Nov 12 20:14:01 EST 2020
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -20,16 +20,16 @@ package controllers.javascript {
 
   
     // @LINE:8
-    def results: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.results",
+    def profile: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.profile",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "results"})
+        function(user0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("user", user0))})
         }
       """
     )
   
-    // @LINE:10
+    // @LINE:9
     def tweetSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.tweetSearch",
       """
@@ -53,19 +53,9 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
-    def profiles: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.profiles",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profiles"})
-        }
-      """
-    )
-  
   }
 
-  // @LINE:14
+  // @LINE:13
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -73,7 +63,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:14
+    // @LINE:13
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/PlayWebApplication/conf/routes
-// @DATE:Tue Nov 10 22:01:36 EST 2020
+// @DATE:Thu Nov 12 20:14:01 EST 2020
 
 
 package router {

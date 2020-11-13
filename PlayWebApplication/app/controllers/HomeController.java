@@ -1,5 +1,7 @@
 package controllers;
 
+import models.Tweet;
+import models.Profile;
 import models.TweetHandler;
 import models.TwitterResultModel;
 import play.api.data.Form;
@@ -33,9 +35,14 @@ public class HomeController extends Controller {
 
     private TweetService tweetService = new TweetService();
 
+    public HomeController() throws TwitterException {
+    }
+
     public Result tweetSearch(String keyWords) {
-        ArrayList<String> tweetList= tweetService.getTweets(keyWords);
+
+        ArrayList<Tweet> tweetList= tweetService.getTweets(keyWords);
         return ok(views.html.tweet.render(tweetList));
+
     }
 
     public Result index() {
@@ -47,13 +54,12 @@ public class HomeController extends Controller {
 
         return ok(views.html.index.render());
     }
-    public Result results() {
-        return ok(views.html.results.render());
-    }
 
-    public Result profiles() {
-        return ok(views.html.profile.render());
-    }
+
+     public Result profile(String user) { 
+        Profile userProfile = tweetService.getProfile(user);
+         return ok(views.html.profile.render(userProfile));
+     }
     public Result explore() {
         return ok("hello");
     }
