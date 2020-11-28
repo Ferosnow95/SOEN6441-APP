@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="sbt-plugin">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/null/Coursier/cache/v1/https/repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.12/sbt_1.0/2.8.2/jars/sbt-plugin.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

@@ -1,29 +1,22 @@
 package controllers;
 
+import akka.actor.*;
+import akka.stream.Materializer;
+
 import models.Tweet;
 import models.Profile;
-import models.TweetHandler;
-import models.TwitterResultModel;
-import play.api.data.Form;
-import play.api.data.Forms;
+import play.libs.streams.ActorFlow;
 import play.mvc.*;
+import service.ProfileActor;
 import service.TweetService;
+import service.UserActor;
 import twitter4j.*;
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionStage;
 
-import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Controller;
 import play.mvc.Result;
-import play.mvc.Results;
-import scala.jdk.javaapi.CollectionConverters;
-
-import static java.util.stream.Collectors.toList;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -34,13 +27,23 @@ public class HomeController extends Controller {
 
 
     private TweetService tweetService = new TweetService();
+    private ActorSystem actorSystem;
+    private Materializer materializer;
 
 
+    /**
+     * Constructor to initialize ActorSystem and Materializer
+     *
+     * @param actorSystem
+     * @param materializer
+     * @throws TwitterException
+     */
+    @Inject
+    public HomeController(ActorSystem actorSystem, Materializer materializer) throws TwitterException {
+        this.actorSystem = actorSystem;
+        this.materializer = materializer;
 
-
-    public HomeController() throws TwitterException {
     }
-
 
     /**
      * TweetSearch Controller
@@ -61,32 +64,72 @@ public class HomeController extends Controller {
 //        Form<String> keyword= form(String.class);
 //        form(TwitterResultModel.class).bindFromRequest();
 
-
-
         return ok(views.html.index.render());
     }
 
 
     /**
      * Profile Controller
+     *
      * @author Ali Zafar Iqbal
      * @date 2020-11-13
      * @return Profile Page Render
      */
 
 
-     public Result profile(String user) { 
+    public Result profile(String user) {
         Profile userProfile = tweetService.getProfile(user);
-         return ok(views.html.profile.render(userProfile));
-     }
+        return ok(views.html.profile.render(userProfile));
+    }
     public Result explore() {
         return ok("hello");
     }
+//
+//    public Result explore() {
+//        return ok("hello");
+//    }
+//
+//
+//
 
 
 
+//    private Flow<String, String, ?> createFlowForActor() {
+//        return ActorFlow.actorRef(out -> SearchActor.props(out),
+//                actorSystem, materializer);
+//    }
+//
+//    private CompletionStage<F.Either<Result, Flow<String, String, ?>>>
+//    createActorFlow(Http.RequestHeader request) {
+//        return CompletableFuture.completedFuture(
+//                F.Either.Right(createFlowForActor()));
+//    }
+//
+//
+//    public WebSocket searchSocket() {
+//        return WebSocket.Text
+//                .acceptOrResult(this::createActorFlow);
+//    }
 
+    /**
+     * Web socket for tweet search
+     *
+     * @return
+     */
+    public WebSocket searchSocket() {
+        return WebSocket.Text.accept(
+                request -> ActorFlow.actorRef(UserActor::props, actorSystem, materializer));
+    }
 
+    /**
+     * Web socket for profile selection
+     *
+     * @return
+     */
+    public WebSocket profileSocket() {
+        return WebSocket.Text.accept(
+                request -> ActorFlow.actorRef(ProfileActor::props, actorSystem, materializer));
+    }
 
 
 //    private final AssetsFinder assetsFinder;

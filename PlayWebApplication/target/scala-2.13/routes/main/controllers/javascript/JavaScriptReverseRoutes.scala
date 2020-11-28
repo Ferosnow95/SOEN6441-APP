@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/New folder (3)/PlayWebApplication/conf/routes
-// @DATE:Fri Nov 13 16:36:02 EST 2020
+// @SOURCE:S:/New folder (2)/Changed/PlayWebApplication/conf/routes
+// @DATE:Sat Nov 28 09:53:46 EST 2020
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -53,9 +53,19 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:10
+    def searchSocket: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.searchSocket",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ws"})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:13
+  // @LINE:14
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -63,7 +73,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:14
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

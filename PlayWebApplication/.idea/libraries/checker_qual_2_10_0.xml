@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="checker-qual-2.10.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/null/Coursier/cache/v1/https/repo1.maven.org/maven2/org/checkerframework/checker-qual/2.10.0/checker-qual-2.10.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

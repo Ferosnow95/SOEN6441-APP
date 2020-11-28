@@ -1,4 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\PlayWebApplication\app\views\tweet.scala.html:47:108: method + in class Char is deprecated (since 2.13.0): Adding a number and a String is deprecated. Use the string interpolation `s"$num$str"`[0m
+[0m[[0m[33mwarn[0m] [0m[0mS:\New folder (2)\Changed\PlayWebApplication\app\views\tweet.scala.html:47:108: method + in class Char is deprecated (since 2.13.0): Adding a number and a String is deprecated. Use the string interpolation `s"$num$str"`[0m
 [0m[[0m[33mwarn[0m] [0m[0m                        <div class="result-title" onclick="showProfile('@resultList(i).screenName')"> @('@'+resultList(i).screenName)</div>[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                                                                                           ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

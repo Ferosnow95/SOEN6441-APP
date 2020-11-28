@@ -1,6 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0mC:\PlayWebApplication\test\controllers\TweetServiceTest.java:92:1: no suitable method found for thenReturn(java.util.List<twitter4j.Status>)[0m
-[0m[[0m[31merror[0m] [0m[0m    method org.mockito.stubbing.OngoingStubbing.thenReturn(twitter4j.ResponseList<twitter4j.Status>) is not applicable[0m
-[0m[[0m[31merror[0m] [0m[0m      (argument mismatch; java.util.List<twitter4j.Status> cannot be converted to twitter4j.ResponseList<twitter4j.Status>)[0m
-[0m[[0m[31merror[0m] [0m[0m    method org.mockito.stubbing.OngoingStubbing.thenReturn(twitter4j.ResponseList<twitter4j.Status>,twitter4j.ResponseList<twitter4j.Status>...) is not applicable[0m
-[0m[[0m[31merror[0m] [0m[0m      (argument mismatch; java.util.List<twitter4j.Status> cannot be converted to twitter4j.ResponseList<twitter4j.Status>)[0m
-[0m[[0m[31merror[0m] [0m[0mwhen(twitter.getUserTimeline("@test1")).thenReturn[0m

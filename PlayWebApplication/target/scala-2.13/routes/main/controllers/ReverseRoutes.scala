@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/New folder (3)/PlayWebApplication/conf/routes
-// @DATE:Fri Nov 13 16:36:02 EST 2020
+// @SOURCE:S:/New folder (2)/Changed/PlayWebApplication/conf/routes
+// @DATE:Sat Nov 28 09:53:46 EST 2020
 
 import play.api.mvc.Call
 
@@ -44,16 +44,22 @@ package controllers {
     
     }
   
+    // @LINE:10
+    def searchSocket(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "ws")
+    }
+  
   }
 
-  // @LINE:13
+  // @LINE:14
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:13
+    // @LINE:14
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
