@@ -1,11 +1,11 @@
-2020-11-28 10:32:29,953 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-12-06 07:13:59,393 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-11-28 10:32:29,979 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
-2020-11-28 10:32:42,302 [INFO] from play.api.internal.libs.concurrent.CoordinatedShutdownSupport in pool-10-thread-3 - Starting synchronous coordinated shutdown with ServerStoppedReason reason and 35000 milliseconds timeout
-2020-11-28 10:32:42,303 [INFO] from play.core.server.AkkaHttpServer in pool-10-thread-3 - Stopping Akka HTTP server...
-2020-11-28 10:32:42,308 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-akka.actor.internal-dispatcher-3 - Terminating server binding for /0:0:0:0:0:0:0:0:9000
-2020-11-28 10:32:42,351 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-akka.actor.internal-dispatcher-13 - Running provided shutdown stop hooks
+2020-12-06 07:13:59,424 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
+2020-12-06 07:14:08,210 [INFO] from play.api.internal.libs.concurrent.CoordinatedShutdownSupport in pool-10-thread-9 - Starting synchronous coordinated shutdown with ServerStoppedReason reason and 35000 milliseconds timeout
+2020-12-06 07:14:08,211 [INFO] from play.core.server.AkkaHttpServer in pool-10-thread-9 - Stopping Akka HTTP server...
+2020-12-06 07:14:08,215 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-akka.actor.internal-dispatcher-4 - Terminating server binding for /0:0:0:0:0:0:0:0:9000
+2020-12-06 07:14:08,249 [INFO] from play.core.server.AkkaHttpServer in play-dev-mode-akka.actor.internal-dispatcher-13 - Running provided shutdown stop hooks

@@ -1,0 +1,13 @@
+[0m[[0m[33mwarn[0m] [0m[0mS:\New folder (2)\Changed\PlayWebApplication\test\controllers\ClientInteraction.scala:20:32: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `onError`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0m    def onError(p1: Exception) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mS:\New folder (2)\Changed\PlayWebApplication\test\controllers\ClientInteraction.scala:24:36: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `onMessage`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0m    def onMessage(message: String) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mS:\New folder (2)\Changed\PlayWebApplication\test\controllers\ClientInteraction.scala:29:61: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `onClose`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0m    def onClose(code: Int, reason: String, remote: Boolean) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mS:\New folder (2)\Changed\PlayWebApplication\test\controllers\ClientInteraction.scala:33:48: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `onOpen`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0m    def onOpen(handshakedata: ServerHandshake) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
