@@ -40,7 +40,7 @@
             </div>
 
             <div class="results-container" >
-                @for(i <- (0 until resultList.length).reverse) {
+                @for(i <- 0 until resultList.length) {
                 <div class="result-container">
                     <div class="result-index">@(i+1)</div>
                     <div class="result">
@@ -81,7 +81,7 @@
       $('#search-terms').val(keyWord);
       $('#search-text').text(keyWord);
     }
-    
+
     });
 
   function showProfile(userName = '')
@@ -94,7 +94,6 @@
                 $('#myModal').modal('show');
             }
         });
-        webSocket.close();
   }
 
   function goBack() {
@@ -116,7 +115,7 @@
                 $('.body-container').prepend(result);
             }
         });
-        
+
     }
   }
 
@@ -184,7 +183,7 @@
     var x = temp.replace(/{{tweet.screenName}}/ig, tweet.screenName);
     x = x.replace(/{{tweet.content}}/ig, tweet.content);
     x = x.replace(/{{INDEX}}/ig, ++tweetIndex);
-    $('.results-container').prepend(x);
+    $('.results-container').append(x);
     $('.search-count').text(tweetIndex);
   }
   function writeToScreen(message) {
