@@ -1,0 +1,68 @@
+@(userProfile: Profile)
+<html>
+  <head>
+    <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/results.css")'>
+    <link rel="stylesheet" href='@routes.Assets.versioned("stylesheets/profile.css")'>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+<body>
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="top-line"></div>
+            <div class="modal-header">
+              <div class="profile-picture">
+                <img src="@userProfile.imageLink">
+              </div>
+              <div class="profile-info">
+                <div class="profile-info-header">
+                  <div class="profile-info-header-title">
+                      <div class="profile-info-header-name">@userProfile.name</div>
+                      <div class="profile-info-header-tag">@userProfile.screenName</div>
+                  </div>
+                  <div class="profile-number-following">@userProfile.following</div>
+                  <div class="profile-text-following">Following</div>
+                  <div class="profile-number-followers">@userProfile.followers</div>
+                  <div class="profile-text-followers">Followers</div>
+                </div>
+                <div class="profile-description">
+                  @userProfile.description
+                </div>
+                <div class="profile-info-footer">
+                  <div class="profile-info-footer-image"><img src="/assets/images/joined.svg"></div>
+                  <div class="profile-info-footer-text">Joined</div>
+                  <div class="profile-info-footer-date-joined">@userProfile.dateJoined</div>
+                  <div class="profile-info-footer-image"><img src="/assets/images/link.svg"></div>
+                  <div class="profile-info-footer-text">Link</div>
+                  <div class="profile-info-footer-link">@userProfile.link</div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="profile-body">
+                <div class="profile-body-title">Latest Tweets</div>
+                <div class="results-container" ></option>
+                  @for(i <- 0 until userProfile.tweets.length) {
+                  <div class="result-container">
+                    <div class="result-index">@(i+1)</div>
+                    <div class="result">
+                       <div class="result-title" onclick="showmodal()">@userProfile.tweets(i).date</div>
+                       <div class="result-content">
+                         @userProfile.tweets(i).content
+                       </div>
+                    </div>
+                  </div>
+                }
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
